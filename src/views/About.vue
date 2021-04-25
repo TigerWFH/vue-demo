@@ -3,7 +3,8 @@
     <h1>This is an about page</h1>
     <component v-for="type in types"
       :key="type"
-      :is="type" />
+      :is="type"
+      :args="123" />
   </div>
 </template>
 <script lang="ts">
