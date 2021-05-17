@@ -3,7 +3,13 @@
     <h1>This is an about page</h1>
     <div>{{ name }}</div>
     <div>123</div>
-    <component v-for="type in types" :key="type" :is="type" :args="123" />
+    <component
+      v-for="type in types"
+      :key="type"
+      :is="type"
+      :args="123"
+      :dataSource="dataSource"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -16,6 +22,9 @@ export default {
     return {
       types: ["Name", "Age"],
       name: "monkey",
+      dataSource: {
+        gg: "gg",
+      },
     }
   },
   components: {
